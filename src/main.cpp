@@ -4,6 +4,13 @@
 #include <cstdio>
 #include <iostream>
 
+#include "draw.h"
+
+
+// TODO refrence from https://youtu.be/fz3Td2zlgro
+
+
+
 int main(int argc, const char* argv[])
 {
 	time_t begin = time(NULL);
@@ -41,7 +48,11 @@ int main(int argc, const char* argv[])
 
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
 
-    glEnableVertexAttribArray(0);
+    triangle test = {200, 500, 100,  300, 500, 100,  250, 700, 100};
+
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+
+    drawTriangle(test, buffer, 0);
 
     while (!glfwWindowShouldClose(window))
     {
