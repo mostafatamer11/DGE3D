@@ -4,11 +4,10 @@
 #include <cstdio>
 #include <iostream>
 
-#include "draw.h"
+#include "include/draw.h"
 
 
 // TODO refrence from https://youtu.be/fz3Td2zlgro
-
 
 
 int main(int argc, const char* argv[])
@@ -38,6 +37,7 @@ int main(int argc, const char* argv[])
         fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
         return 1;
     }
+
     fprintf(stdout, "GLEW version: %s\n", glewGetString(GLEW_VERSION));
     fprintf(stdout, "GL version: %s\n", glGetString(GL_VERSION));
 
