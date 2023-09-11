@@ -1,0 +1,1 @@
+g++ src\*.cpp bin\*.dll -Iinclude -obin\game.exe -lopengl32
